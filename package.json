@@ -1,0 +1,14 @@
+{
+	"name": "lube-bot",
+	"version": "1.0.0",
+	"description": "Manages quotes from the majestic Big Lube",
+	"main": "src/LubeBot.js",
+	"author": "Shcott",
+	"dependencies": {
+		"discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
+		"winston": "^3.1.0"
+	},
+	"scripts": {
+		"start": "node src/LubeBot.js"
+	}
+}
