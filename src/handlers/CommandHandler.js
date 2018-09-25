@@ -15,26 +15,25 @@ exports.handleCommand = (cmd, args, user, userId, channelId, message, evt) => {
         case 'ping':
             handlePing(channelId)
             break
+        case 'help':
+            handleHelp(channelId)
+            break
         case 'add':
-        case 'addquote':
             handleAddQuote(channelId, args)
             break
         case 'edit':
-        case 'editquote':
             handleEditQuote(channelId, args)
             break
         case 'remove':
-        case 'removequote':
             handleRemoveQuote(channelId, args)
             break
         case 'getfulljson':
             handleGetFullJson(channelId)
+            break
         case 'get':
-        case 'getquote':
             handleGetQuote(channelId, args)
             break
         case 'random':
-        case 'randomQuote':
             handleRandomQuote(channelId)
             break
         case 'list':
@@ -54,6 +53,10 @@ const handlePing = (channelId) => {
     LOGGER.info('Pong!')
     console.log('pong!')
     sendMessage(channelId, 'pong!')
+}
+
+const handleHelp = (channelId) => {
+    sendMessage(channelId, FileHelper.getReadMe())
 }
 
 const handleAddQuote = (channelId, args) => {

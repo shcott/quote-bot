@@ -2,15 +2,33 @@
 
 var fs = require('fs')
 
+var README_PATH = './readme.txt'
 var FILE_PATH = './data/quotes.json'
 
 var LOGGER = null
-var quotesJson = null;
+var readMeString =  null
+var quotesJson = null
 
 exports.init = (_logger) => {
     LOGGER = _logger
+    loadReadMe()
     readFromFile()
     initQuotesJsonIfNull()
+}
+
+const loadReadMe = () => {
+    fs.readFile(README_PATH, (err, data) => {
+        if(err) {
+            console.log(err)
+        } else {
+            readMeString = data
+            LOGGER.info('Loaded readme')
+        }
+    })
+}
+
+exports.getReadMe = () => {
+    return readMeString
 }
 
 const initQuotesJsonIfNull = () => {
