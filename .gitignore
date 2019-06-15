@@ -6,6 +6,9 @@ auth/
 # Ignore releases folder
 releases/
 
+# Ignore production quotes.json
+**/quotes-pr.json
+
 # Created by https://www.gitignore.io/api/node
 
 ### Node ###
