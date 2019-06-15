@@ -1,6 +1,8 @@
 # Hi, I'm Quote Bot!
 I store quotes made by the majestic Luben Popov and repeat them at your demand in Discord.
 
+![Image](img/chat.png?raw=true)
+
 I have the following commands that you can use:
 
 * **!ping** Pong!
