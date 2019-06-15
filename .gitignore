@@ -1,6 +1,10 @@
+# Authorization/credentials
 auth.json
 **/auth.json
 auth/
+
+# Ignore releases folder
+releases/
 
 # Created by https://www.gitignore.io/api/node
 
